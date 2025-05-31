@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicHub - Your Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="musichub">
+    <header>
+      <div class="logo">🎵 MusicHub</div>
+       <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search songs..." />
+  </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h3>🎶 Playlist</h3>
+        <ul id="songList">
+          <!-- Songs dynamically inserted by JS -->
+        </ul>
+      </aside>
+
+      <main class="player">
+        
+        <div class="album-art">
+          <img id="trackImage" src="default.jpg" alt="Album Art">
+        </div>
+        <div class="track-info">
+          <h2 id="trackName">Track Name</h2>
+          <h4 id="trackArtist">Track Artist</h4>
+        </div>
+       <div class="controls">
+  <button id="prev" class="control-btn">
+    <img src="images/prev.png" alt="Previous">
+  </button>
+
+  <button id="play" class="control-btn">
+    <img id="play-icon" src="images/play.png" alt="Play">
+  </button>
+
+  <button id="next" class="control-btn">
+    <img src="images/next.png" alt="Next">
+  </button>
+</div>
+
+
+        <div class="progress">
+          <span id="currentTime">00:00</span>
+          <input type="range" id="progressBar" value="0">
+          <span id="duration">00:00</span>
+        </div>
+        <div class="volume">
+          <span>🔊</span>
+          <input type="range" id="volume" min="0" max="1" step="0.01">
+        </div>
+      </main>
+    </div>
+
+    <audio id="audio"></audio>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
